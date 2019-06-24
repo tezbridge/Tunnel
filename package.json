@@ -1,0 +1,23 @@
+{
+  "name": "tunnel",
+  "version": "1.0.0",
+  "description": "Tunnel for WebRTC connection information signaling in TezBridge",
+  "scripts": {
+    "dev": "netlify-lambda serve src",
+    "build": "netlify-lambda build src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tezbridge/tunnel.git"
+  },
+  "author": "catsigma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tezbridge/tunnel/issues"
+  },
+  "homepage": "https://github.com/tezbridge/tunnel#readme",
+  "dependencies": {
+    "base-x": "^3.0.5",
+    "netlify-lambda": "^1.4.13"
+  }
+}

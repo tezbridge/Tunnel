@@ -4,6 +4,17 @@ import basex from 'base-x'
 const base36 = basex('0123456789abcdefghijklmnopqrstuvwxyz')
 const connections = {}
 
+const genCallback = content => {
+  return {
+    statusCode: 200, 
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'POST'
+    },
+    body: conn_info
+  }
+}
+
 exports.handler = (event, context, callback) => {
   if (event.httpMethod === 'POST') {
     let result
@@ -18,7 +29,7 @@ exports.handler = (event, context, callback) => {
       break
     }
 
-    callback(null, {statusCode: 200, body: result})
+    callback(null, genCallback(result))
 
   } else {
     
@@ -27,7 +38,7 @@ exports.handler = (event, context, callback) => {
       const conn_info = connections[params.wid]
       delete connections[params.wid]
 
-      callback(null, {statusCode: 200, body: conn_info})
+      callback(null, genCallback(conn_info))
     } else {
       callback(new Error('invalid wid'))
     }

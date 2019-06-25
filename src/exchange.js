@@ -20,7 +20,7 @@ exports.handler = (event, context, callback) => {
   if (event.httpMethod === 'POST') {
     let result
     while (true) {
-      const rnd_buf = crypto.randomBytes(4)
+      const rnd_buf = crypto.randomBytes(3)
       const key = base36.encode(rnd_buf)
       if (key in connections)
         continue

@@ -10,9 +10,9 @@ const genCallback = content => {
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'POST',
-      'Access-Control-Allow-Credentials': true,
+      'Access-Control-Allow-Credentials': true
     },
-    body: conn_info
+    body: content
   }
 }
 

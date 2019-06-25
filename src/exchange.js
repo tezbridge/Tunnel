@@ -10,7 +10,7 @@ const genCallback = content => {
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'POST',
-      'Access-Control-Allow-Credentials': true
+      'Access-Control-Allow-Credentials': 'true'
     },
     body: content
   }
@@ -41,7 +41,7 @@ exports.handler = (event, context, callback) => {
 
       callback(null, genCallback(conn_info))
     } else {
-      callback(new Error('invalid wid'))
+      callback(null, genCallback(''))
     }
   }
 

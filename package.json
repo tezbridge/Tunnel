@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/tezbridge/tunnel#readme",
   "dependencies": {
-    "base-x": "^3.0.5",
-    "netlify-lambda": "^1.4.13"
+    "base-x": "^3.0.6",
+    "netlify-lambda": "^1.6.3"
   }
 }
